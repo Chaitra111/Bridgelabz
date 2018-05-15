@@ -192,3 +192,6 @@ public class PrimeChecker {
       System.out.println(primeChecker.toString());
    }
 }
+/*
+modified code
+*/
