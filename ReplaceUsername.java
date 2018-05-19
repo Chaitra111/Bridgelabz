@@ -16,13 +16,33 @@ public class ReplaceUsername
 		Utility utility = new Utility();
 		String name=utility.getString();
 		String msg = "Hello <<username>>, How are you?";
-		
 		if(name.length()>=3) 
 		{
 		    System.out.println(msg.replace("<<username>>",name));
 		}
 		else
 		{
-			System.out.println("Invalid input");
+			System.out.println("Required minimum three character");
 		} 
-		} }
+		} 
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
