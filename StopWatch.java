@@ -9,44 +9,20 @@ import com.bridgelabz.Utility.Utility;
  */
 public class StopWatch 
 {
-	public long startTime=0;
-	public long stopTime=0;
-	public long elapsed;
-	
-	//to start timer
-	public void start()
-	{
-		startTime=System.currentTimeMillis();
-		System.out.println("Start Time is: "+startTime);
-	}
-	
-	// to stop timer
-	public void stop()
-	{
-		stopTime=System.currentTimeMillis();
-		System.out.println("Stop Time is: "+stopTime);
-	}
-	
-	public long getElapsedTime()
-	{
-		elapsed=stopTime-startTime;
-		return elapsed;
-	}
-	
 	public static void main(String[] args) throws Exception
 	{
-		StopWatch sw=new StopWatch();
+		//StopWatch sw=new StopWatch();
 		Utility u=new Utility();
 		System.out.println("Press '1' to Start Time: ");
 		u.getInteger();
-		sw.start();
+		u.start();
 
 		System.out.println();
 		System.out.println("Press '2' to Stop Time: ");
 		u.getInteger();
-		sw.stop();
+		u.stop();
 
-		long l=sw.getElapsedTime();
+		long l=u.getElapsedTime();
 		System.out.println();
 		System.out.println("Total Time Elapsed(in millisec) is:"+l);
 		System.out.println();
