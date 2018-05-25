@@ -1,7 +1,6 @@
 package com.bridgelabz.FunctioalPrograming;
 
 import com.bridgelabz.Utility.Utility;
-
 /**
  * @author Chaitra Ankolekar
  * Date : 18/05/2018
@@ -14,7 +13,7 @@ public class FlipCoin
     public static double flip1(int flip)
     {
     	System.out.println(Math.random());
-	        if(Math.random()*flip>0.5)
+	        if(Math.random()>0.5)
 	        {
 	            heads++;
 	            System.out.println(heads);
@@ -22,8 +21,8 @@ public class FlipCoin
 	        else
 	        {
 	        tails++;
-	        }
 	        System.out.println(tails);
+	        }
 	        System.out.println("percentage of heads= "+(heads*100)/flip);
 	        System.out.println("percentage of tails= "+(tails*100)/flip);
 	        
@@ -34,7 +33,7 @@ public class FlipCoin
 	    Utility u=new Utility();
 	    int flip=u.getInteger();
 	    flip1(flip);
-	    System.out.println(u);
+	    
 	    
 	}
 	}

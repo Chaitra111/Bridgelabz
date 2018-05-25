@@ -14,8 +14,8 @@ public class LeapYear
 		Utility utility = new Utility();
 		
 		int number=utility.getInteger();
-		int digits =utility.noOfDigits(number);
+		int digits =Utility.noOfDigits(number);
 		System.out.println("No of digits: " +digits);
-		utility.leapyear(number, digits);
+		Utility.leapyear(number, digits);
 	}
 }

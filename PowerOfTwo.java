@@ -16,7 +16,7 @@ public class PowerOfTwo {
 		{
 		System.out.println(args[i]);
 		int pwr=Integer.parseInt(args[i]);
-		utility.power(pwr);
+		utility.findPower(pwr);
 		}
 		}
 	}

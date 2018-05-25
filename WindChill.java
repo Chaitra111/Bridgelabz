@@ -7,7 +7,7 @@ package com.bridgelabz.FunctioalPrograming;
  */
 public class WindChill 
 {
-	//Check temperature
+	//Method to check temperature
 	public static void checkTemp(int x,int y)
 	{
 		if(x<=50 && y<=120 && y>3)

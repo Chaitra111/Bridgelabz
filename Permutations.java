@@ -8,19 +8,17 @@ import com.bridgelabz.Utility.Utility;
  */
 public class Permutations 
 {
-	private static void permutations(char[] ch, int currentIndex)
-    {
-		
-        if (currentIndex == ch.length - 1) 
+	private static void permutations(char[] chars, int index)
+    {		
+        if (index==chars.length - 1) 
         {
-            System.out.println(String.valueOf(ch));
+            System.out.println(String.valueOf(chars));
         }
-
-        for (int i = currentIndex; i < ch.length; i++)
+        for (int i = index; i < chars.length; i++)
         {
-            Utility.swap(ch, currentIndex, i);
-            permutations(ch, currentIndex + 1);
-            Utility.swap(ch, currentIndex, i);
+            Utility.swap(chars, index, i);
+            permutations(chars, index + 1);
+            Utility.swap(chars, index, i);
         }
     }
     // generate all permutations of a String in Java

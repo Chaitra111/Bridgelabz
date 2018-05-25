@@ -3,7 +3,6 @@ package com.bridgelabz.FunctioalPrograming;
 import java.io.PrintWriter;
 
 import com.bridgelabz.Utility.Utility;
-
 /**
  * @author Chaitra Ankolekar
  * Date : 18/05/2018
@@ -30,7 +29,6 @@ public class Array2D
 			Utility u=new Utility();    
 			System.out.println();
 			System.out.println("Integer Array");
-	
 			for(int i = 0; i<rows; i++)
 			{
 				for (int j = 0; j<cols; j++)
@@ -40,7 +38,6 @@ public class Array2D
 			}
 			return array1;
 		}
-		
 		public static double[][] arrayDouble(int rows,int cols)
 		{
 			double array2 [][]=new double[rows][cols];
