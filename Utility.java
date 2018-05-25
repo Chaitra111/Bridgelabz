@@ -13,7 +13,7 @@ public class Utility
 		public String getString()
 		{
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Enter the input string");
+			System.out.print("Enter the input string");
 			return scanner.nextLine();
 		}
 		
@@ -21,7 +21,7 @@ public class Utility
 		public double getDouble()
 		{
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Enter the double");
+			System.out.print("Enter the double");
 			return scanner.nextDouble();
 		}
 		
@@ -29,7 +29,7 @@ public class Utility
 		public int getInteger()
 		{
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Enter the integer");
+			System.out.print("Enter the integer");
 			return scanner.nextInt();
 		}
 	
@@ -64,7 +64,7 @@ public class Utility
 		}
 		 
 		 //Method to find prime factor
-		 public  void toFindPrime(int number)
+		 public void toFindPrime(int number)
 		 {
 			int i=2;
 			while(number>1 && i*i<=number)
@@ -89,7 +89,7 @@ public class Utility
 			for(int i=1; i<power; i++)
 			{
 				out=(2*out);
-				//System.out.println(out);
+				System.out.println(out);
 			}
 			return out;
 		 }
@@ -281,10 +281,10 @@ public class Utility
 		//BinarySearch   method   for   integer 
 		static int mid;
 		static int [] arr1;
-		public int binarySearchInteger(int [] arr1, int key) 
+		public int binarySearchInteger(int [] arr1, int key,int start,int end) 
 		{
-			int start=0;
-			int end=arr1.length-1;
+			//int start=0;
+			//int end=arr1.length-1;
 			int mid=(start+end)/2;
 			while(mid>=0 && mid<arr1.length-1)
 			{
@@ -294,11 +294,11 @@ public class Utility
 				}
 				else if(arr1[mid]>key)
 				{
-					return end = mid + 1;
+					return binarySearchInteger(arr1, key, 0,mid-1);
 				}
 				else if(arr1[mid]<key)
 				{
-					return end = mid - 1;
+					return binarySearchInteger(arr1,key,mid+1,end);
 				}
 			}
 			return -1;
@@ -307,10 +307,10 @@ public class Utility
 		//BinarySearch method for String 
 		static String midStr;
 		static String [] str1;
-		public int binarySearchString(String [] str1, String key) 
+		public int binarySearchString(String [] str1, String key,int start, int end) 
 		{
-			int start = 0;
-			int end = str1.length;
+			//int start = 0;
+			//int end = str1.length;
 			int mid=(start+end)/2;
 			while(mid>=0 && mid<str1.length-1)
 			{
@@ -456,7 +456,6 @@ public class Utility
 				else if(str1[mid].compareTo(key)>0)
 				{
 					return start = mid + 1;
-					
 				}
 			}
 			return -1;
