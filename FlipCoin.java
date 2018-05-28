@@ -10,9 +10,11 @@ public class FlipCoin
 {
 	static int heads=0;
 	static int tails=0;
-    public static double flip1(int flip)
+    public static void flip1(int noofflip)
     {
-    	System.out.println(Math.random());
+    		for (int i=0; i< noofflip; i++) 
+			{
+    		System.out.println(Math.random());
 	        if(Math.random()>0.5)
 	        {
 	            heads++;
@@ -20,13 +22,14 @@ public class FlipCoin
 	        }
 	        else
 	        {
-	        tails++;
-	        System.out.println(tails);
+	        	tails++;
+	        	System.out.println(tails);
 	        }
-	        System.out.println("percentage of heads= "+(heads*100)/flip);
-	        System.out.println("percentage of tails= "+(tails*100)/flip);
+			}
+	        System.out.println("percentage of heads= "+(heads*100)/noofflip);
+	        System.out.println("percentage of tails= "+(tails*100)/noofflip);
 	        
-	         return 1.0;
+	       
 	    }
 	public static void main(String args[])
 	{

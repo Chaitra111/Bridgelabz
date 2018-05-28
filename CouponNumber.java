@@ -1,4 +1,6 @@
 package com.bridgelabz.FunctioalPrograming;
+
+import com.bridgelabz.Utility.Utility;
 /**
  * @author Chaitra Ankolekar
  * Date : 18/05/2018
@@ -8,20 +10,28 @@ public class CouponNumber
 {
 	public static void main(String[] args) 
 	{
-		String string="abndghjklpoiuuyyttrew456787890";
+		Utility u=new Utility(); 
+		int num=u.getInteger();
+		int c=0;
+		int n=0;
+		String string=u.getString();
 		char[] ch=string.toCharArray();
-		int maxValue=1000;
-		int randomValue=(int) (Math.random()*maxValue);	
 		StringBuffer buffer=new StringBuffer();
-		
-		while (randomValue>0)
+		while(n<num)
 		{
-			buffer.append(ch[randomValue % ch.length]);
-			randomValue /= ch.length;
+		int maxValue=1000;
+		int value=(int) (Math.random()*maxValue);	
+		
+		while (value>0)
+		{
+			buffer.append(ch[value % ch.length]);
+			value /= ch.length;
+			c++;
 		}
-
+		n++;
+		}
 		String couponCode=buffer.toString();
-		System.out.println("Coupon Code is : "+couponCode);	
+		System.out.println("Distinct coupon Code is"  +" " +couponCode+ " " );
 	}
 }
 

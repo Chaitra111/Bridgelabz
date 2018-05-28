@@ -8,10 +8,6 @@ import com.bridgelabz.Utility.Utility;
  */
 public class TicTacToe 
 {
-	static final  int X=0;
-	static final int Y=-1;
-	private int player;
-	
 	 public static void main(String[ ] args)
      {
          TicTacGame t = new TicTacGame();
@@ -19,7 +15,7 @@ public class TicTacToe
          int x=0,y=0;
          do
          {
-             System.out.println(t.player==t.X?"Player X turn":"Player O turn");
+             System.out.println(t.player==t.X ?"Player X turn":"Player O turn");
              System.out.println("Enter x and y places");
              x=u.getInteger();
              y=u.getInteger();

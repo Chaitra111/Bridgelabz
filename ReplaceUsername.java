@@ -1,7 +1,6 @@
 package com.bridgelabz.FunctioalPrograming;
 
 import com.bridgelabz.Utility.Utility;
-
 /**
  * @author Chaitra Ankolekar
  * 
@@ -22,7 +21,7 @@ public class ReplaceUsername
 		}
 		else
 		{
-			System.out.println("Required minimum three character");
+			System.out.println("Invalid input required minimum three character........");
 		} 
 		} 
 	}
