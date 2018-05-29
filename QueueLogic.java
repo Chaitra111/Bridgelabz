@@ -1,107 +1,139 @@
 package com.bridgelabz.DataStructure;
 
-public class QueueLogic 
+import java.util.NoSuchElementException;
+
+/*  Class Node  */
+class Node
 {
-	int array[];
-	int size;
-	int front=0;
-	int rear=-1;
-	int n=0;
-	
-	public QueueLogic(int capacity)
-	{
-		size=capacity;
-		array=new int[size];
-	}
-	
-	//add items to the rear end of the queue
-	public void enqueue(int item)
-	{
-		if(queueFull())
+	protected int data;
+    protected Node link;
+ 
+    /*  Constructor  */
+    public Node()
+    {
+        link = null;
+        data = 0;
+    }  
+    
+    /* Parameterized Constructor  */
+    public Node(int d,Node n)
+    {
+        data = d;
+        link = n;
+    }  
+    
+    /*  Function to set data to current Node  */
+   	public void setData(int d)
+    {
+        data = d;
+    }   
+    
+   	/*  Function to get link to next node  */
+   	public Node getLink()
+    {
+     	return link;
+    }  
+    
+	/*  Function to set link to next Node  */
+    public void setLink(Node n)
+    {
+        link = n;
+    }  
+
+    /*  Function to get data from current Node  */
+    public int getData()
+    {
+        return data;
+    }
+}
+ 
+/*  Class linkedQueue  */
+public class QueueLogic
+{
+	public Node front, rear;
+    public int size;
+ 
+    /* Constructor */
+    public QueueLogic()
+    {
+        front = null;
+        rear = null;
+        size = 0;
+    }    
+    
+    /*  Function to check if queue is empty */
+    public boolean isEmpty()
+    {
+        return front == null;
+    }   
+    
+    /*  Function to get the size of the queue */
+    public int getSize()
+    {
+        return size;
+    }    
+    
+    /*  Function to insert an element to the queue */
+    public void insert(int data)
+    {
+        Node node = new Node(data, null);
+        if (rear == null)
+        {
+            front = node;
+            rear = node;
+        }
+        else
+        {
+            rear.setLink(node);
+            rear = rear.getLink();
+        }
+        size++ ;
+    }   
+    
+    /*  Function to remove front element from the queue */
+   	public int remove()
+    {
+        if (isEmpty())
 		{
-			System.out.println("Overflow! cannot add the elements");
+        	throw new NoSuchElementException("Underflow Exception");
 		}
-		else
+        Node ptr = front;
+        front = ptr.getLink();        
+        if (front == null)
 		{
-			rear++;
-			if(rear==size-1)
-			{
-				rear=0;
-			}
-			array[rear]=item;
-			n++;
-			System.out.println("Element at " +item+" is pushed to the queue");
-		}
-	}
-	
-	//to remove the elements from queue
-	public void dqueue()
-	{
-		if(queueEmpty())
+            rear =null;
+			size-- ; 
+		}       
+        return ptr.getData();
+    }    
+    
+    /*  Function to check the front element of the queue */
+    public int peek()
+    {
+        if (isEmpty())
 		{
-			System.out.println("Elements cannot be added to the queue");
+            throw new NoSuchElementException("Underflow Exception");
 		}
-		else
-		{
-			front++;
-			if(front==size-1){
-				System.out.println("pop operation done:" +array[front-1]);
-				front=0;
-			}
-			else {
-				System.out.println("pop operation done:" +array[front-1]);
-			}
-			n--;
-		}
-	}
-	public boolean queueEmpty()
-	{
-		return (n==0);	
-	}
-	public boolean queueFull()
-	{
-		return (n==rear);
-	}
-	public int qsize()
-	{
-		return n;
-	}
-	public void display()
-	{
-		int start = front;
-	    for (int j = front ;j <size; j++ )
-		  {  
-		      System.out.println(array[j]);
-		     if (j ==n-1 )
-		        {     
-		    	  j=0;
-		          System.out.println(array[j]);
-		        } 
-		      if (j==start-1)
-		          return;
-	      }
-	}   
-	public static void main(String[] args)
-	{
-		QueueLogic q=new QueueLogic(8);
-		q.enqueue(12);
-		q.enqueue(14);
-		q.enqueue(9);
-		q.enqueue(4);
-		q.dqueue();
-		int a=q.qsize();
-		System.out.println("size:"+a);
-		q.dqueue();
-		q.dqueue();
-		//q.enqueue(19);
-		int a1=q.qsize();
-		System.out.println("size"+a1);
-		q.display();
-		//int a1=q.qsize();
-		//System.out.println("size"+a1);
-		boolean res=q.queueEmpty();
-		System.out.println(res);
-		boolean res1=q.queueFull();
-		System.out.println(res1);
-	}
+        return front.getData();
+    }    
+    
+    /*  Function to display the status of the queue */
+    public void display()
+    {  
+		int ptr1=0;
+        System.out.print("Available Balance = ");
+        if (size == 0)
+        {
+            System.out.print("Empty");
+            return ;
+        }
+        Node ptr = front;
+        while (ptr != rear.getLink() )
+        { 
+        	ptr1=ptr1+ptr.getData();
+        	System.out.println(ptr1);
+            ptr = ptr.getLink();
+        }
+        System.out.println();        
+    }
 }

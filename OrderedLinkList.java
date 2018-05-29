@@ -18,7 +18,6 @@ public class OrderedLinkList
 	        System.out.println("Array Size is "+size);
 	        for(int i=0;i<size;i++)
 	        {
-
 	            addItem(retArry[i]);
 	        }
 	    }
