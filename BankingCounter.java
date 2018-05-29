@@ -10,7 +10,7 @@ public class BankingCounter {
 		int ch = 0;
 		do
 		{ 
-			System.out.println("------------Banking Cash Counter-----------");
+			System.out.println("************Banking Cash Counter***********");
 		   	System.out.println("1.Deposit");
 		   	System.out.println("2.Withdraw");
 		   	System.out.println("3.Number of people in the Queue ");
@@ -28,6 +28,7 @@ public class BankingCounter {
 		   	case 2:
 			   		System.out.println("Enter the amount you want to Withdraw ");
 					u.getInteger();
+					q.peek();
 			   		q.remove();
 			   		System.out.println(" Your Available Balance is: "); 
 			   		q.display();

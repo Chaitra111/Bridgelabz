@@ -135,7 +135,6 @@ import com.bridgelabz.Utility.Node;
 	  	public Node search(Node tNode1, int num)
 		{
 	    	Node tNode=tNode1;
-
 	    	//No elements in an list(List empty)
 	    	if(tNode==null)
 			{
