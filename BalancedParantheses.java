@@ -4,13 +4,12 @@ import com.bridgelabz.Utility.Utility;
 
 public class BalancedParantheses {
 
+	
 	public static void main(String[] args) 
 	{
 		Utility u=new Utility();
-		System.out.println("Enter max size: ");
-		int n=u.getInteger();
 		/* Creating Stack */
-		StackLogic stack = new StackLogic(n);
+		StackLogic stack = new StackLogic(42);
 		/* Accepting expression */
 		System.out.println("Enter expression: ");
 		String exp = u.getString();        

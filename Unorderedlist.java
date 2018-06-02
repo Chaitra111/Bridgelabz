@@ -28,6 +28,7 @@ public class Unorderedlist
 			}
 			//u1.writeToFile(start);
 			lu.writeDataToFile(word2);
+			
 		}
 		catch(NullPointerException n)
 		{
