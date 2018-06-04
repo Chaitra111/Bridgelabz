@@ -13,7 +13,7 @@ public class Harmonic
 		{
 			Utility utility = new Utility();
 			int integer = utility.getInteger();
-			float res=utility.harmonicvalue(integer);
+			float res=Utility.harmonicvalue(integer);
 			System.out.println(res);
 		}
 }

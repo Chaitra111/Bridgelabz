@@ -9,24 +9,18 @@ import com.bridgelabz.Utility.Utility;
  */
 public class SumOfThree
 	{
-		public static int distincttriplets(int array[],int length)
+		public static int distincttriplets(int array[])
 		{
 			System.out.println();
-			int i,j,k,count=0;
-			for(i=0;i<length;i++)
+			int count=0;
+			for(int i=0;i<array.length-2;i++)
 			{
-				for(j=i+1;j<length;j++)
-				{
-					for(k=j+1;k<length;k++)
+					if(array[i]+array[i+1]+array[i+2]==0)
 					{
-						if (array[i] + array[j] + array[k] == 0)
-						{
-							System.out.println(array[i] + " " + array[j] + " " + array[k]);
-							count++;
+						System.out.println(array[i]+" "+array[i+1]+" "+array[i+2]+" = "+"0");
+						count++;
 						}
 					}
-				}
-			}
 			return count;
 		}
 		public static void main(String[] args)
@@ -41,7 +35,7 @@ public class SumOfThree
 				System.out.print("Enter "+(i+1)+" Value :");
 				arr[i]=u1.getInteger();
 			}
-			int sum=distincttriplets(arr,size);
+			int sum=distincttriplets(arr);
 			System.out.println("No.of tripltes :"+sum);
 			System.out.println();
 		}
