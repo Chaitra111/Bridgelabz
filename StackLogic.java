@@ -4,19 +4,13 @@ public class StackLogic<T> {
 	int top;
 	int size;
 	int[] array;
-	/**
-	 * @param size
-	 */
+
 	public StackLogic(int size) {
 		top = -1;
 		this.size = size;
 		array = new int[size];
 	}
 
-	/**
-	 * @param i
-	 * @return
-	 */
 	public int push(T i) {
 		if (top == size - 1) {
 			System.out.println("Stack Overflow");
@@ -25,9 +19,6 @@ public class StackLogic<T> {
 		return array[++top] = (int) i;
 	}
 
-	/**
-	 * @return
-	 */
 	public int pop() {
 		if (top == -1) {
 			System.out.println("Stack is Empty");
@@ -36,9 +27,6 @@ public class StackLogic<T> {
 		return array[top--];
 	}
 
-	/**
-	 * @return
-	 */
 	public int peek() {
 		if (top == -1) {
 			System.out.println("Stack empty");

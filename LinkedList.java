@@ -1,10 +1,7 @@
 package com.bridgelabz.DataStructure;
  
 
-import java.util.NoSuchElementException;
-
 import com.bridgelabz.Utility.Node;
-import com.bridgelabz.Utility.Node1;
 
 public class LinkedList<Integer> {
 	Node head;

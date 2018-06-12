@@ -1,9 +1,10 @@
 package com.bridgelabz.DataStructure;
 
 import com.bridgelabz.Utility.Node;
+import com.bridgelabz.Utility.Node1;
 import com.bridgelabz.Utility.Utility;
 
-public class OrderedLinkList 
+public class OrderedLinkList<E>
 {
 		Node start;
 	    NodeUtility nu=new NodeUtility();
@@ -109,9 +110,10 @@ public class OrderedLinkList
 	            display();
 	        }
 	    }
+	   
 
 	    // removeWord From a Linked lIst
-	    void removeData(int count)
+	   void removeData(int count)
 	    {
 	        Node temp = start;
 	        if(count==1)
@@ -122,7 +124,7 @@ public class OrderedLinkList
 	        }
 	        else
 	        {
-				for(int i=0;i<count-1;i++)
+				for(int i=0;i<count;i++)
 				{
 				 	temp=temp.nextNode;
 				}

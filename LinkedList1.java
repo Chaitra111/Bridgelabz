@@ -1,7 +1,7 @@
 package com.bridgelabz.DataStructure;
 
-
-	public class LinkedList1<T extends Comparable<T>> {
+public class LinkedList1<T extends Comparable<T>> {
+	
 	private Node<T> head = null;
 	private int size = 0;
 
@@ -22,6 +22,7 @@ package com.bridgelabz.DataStructure;
 			return 0;
 		}
 	}
+
 	public void add(T data) {
 		Node<T> new_node = new Node<T>(data);
 		if (head == null) {
@@ -38,12 +39,14 @@ package com.bridgelabz.DataStructure;
 		new_node.next = null;
 		size++;
 	}
+
 	public void addFirst(T data) {
 		Node<T> new_node = new Node<T>(data);
 		new_node.next = head;
 		head = new_node;
 		size++;
 	}
+
 	public void addLast(T data) {
 		if (head == null) {
 			addFirst(data);
@@ -79,7 +82,7 @@ package com.bridgelabz.DataStructure;
 	public boolean search(T value) {
 		Node<T> temp = head;
 		while (temp != null) {
-			if (temp.data.compareTo(value) == 0)
+			if (temp.data.equals(value))
 				return true;
 			temp = temp.next;
 		}
@@ -194,4 +197,4 @@ package com.bridgelabz.DataStructure;
 			current.next = new_node;
 		}
 	}
-	}
+}

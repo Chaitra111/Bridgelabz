@@ -6,10 +6,9 @@ public class PalindromeChecker {
 	
 	public static void main(String[] args) 
 	{
-		Utility u = new Utility();
-		DequeUtil<Character> utility = new DequeUtil<Character>();
+		DequeLogic<Character> utility = new DequeLogic<Character>();
 		System.out.println("Enter a String: ");
-		String s = u.getString();
+		String s = Utility.getString();
 
 		// adding each character to the rear of the deque
 		for (int i = 0; i < s.length(); i++) {

@@ -1,8 +1,8 @@
 package com.bridgelabz.DataStructure;
 
 public class Hash {
-		OrderedLinkList[] order=new OrderedLinkList[11];
-	  	NodeUtility nu=new NodeUtility();
+	OrderedLinkList[] order = new OrderedLinkList[11];
+	NodeUtility nu = new NodeUtility();
 
 	public Hash() {
 		int[] retArray = nu.integerFileReader();
@@ -23,9 +23,7 @@ public class Hash {
 		}
 	}
 
-	    public static void main(String[] args)
-	    {
-	      	Hash hs=new Hash();
-	    }
+	public static void main(String[] args) {
+		Hash hs = new Hash();
 	}
-
+}
