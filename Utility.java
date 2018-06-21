@@ -21,7 +21,7 @@ public class Utility {
 	}
 
 	// Method to get double value
-	public double getDouble() {
+	public static double getDouble() {
 		Scanner scanner = new Scanner(System.in);
 		//System.out.println("Enter the double");
 		return scanner.nextDouble();
