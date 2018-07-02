@@ -15,5 +15,5 @@ import java.lang.annotation.Target;
 
 public @interface JSON 
 {
-    public String jsonName();
+	public String jsonName();
 }

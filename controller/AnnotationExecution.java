@@ -15,8 +15,6 @@ public class AnnotationExecution {
 	static String res1;
 
 	@JSON(jsonName = "json")
-	@JDBC(jdbcName = "jdbc")
-
 	public static String jsonMethod() throws NoSuchMethodException, SecurityException {
 		final Method method = AnnotationExecution.class.getMethod("jsonMethod");
 		if (method.isAnnotationPresent(JSON.class)) {
@@ -27,7 +25,8 @@ public class AnnotationExecution {
 		}
 		return res;
 	}
-
+	
+	@JDBC(jdbcName = "jdbc")
 	public static String jdbcMethod() throws NoSuchMethodException, SecurityException {
 		final Method method = AnnotationExecution.class.getMethod("jdbcMethod");
 		if (method.isAnnotationPresent(JSON.class)) {
